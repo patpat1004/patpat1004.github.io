@@ -1,0 +1,74 @@
+a:link {
+  color: #89b4fa;
+}
+
+a:visited {
+  color: #b4befe;
+}
+
+a:hover {
+  color: #f38ba8;
+}
+
+::selection {
+  color: #f38ba8;
+  background-color: #f38ba84b;
+}
+
+:root {
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+  --accent: #f38ba8;
+  --text-color: #cdd6f4;
+  --border: #45475a;
+  --header-height: 50px;
+}
+
+body {
+  background-color: var(--base);
+  color: var(--text-color);
+  margin: 0px;
+}
+
+.header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: var(--crust);
+  align-items: stretch;
+  min-height: var(--header-height);
+  border-bottom: solid 1px var(--border);
+}
+
+.topnav {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+  gap: 10px;
+  margin: 0px 20px;
+  padding: 0px 0px;
+}
+
+.topnav > a {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #cdd6f4 !important;
+  transition: 200ms;
+}
+
+.topnav > a:hover {
+  background-color: #9399b222;
+}
+.topnav > a.active::after {
+  content: "";
+  background-color: #f38ba8;
+  height: 2px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
