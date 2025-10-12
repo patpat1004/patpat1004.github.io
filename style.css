@@ -1,20 +1,16 @@
 a:link {
   color: #89b4fa;
 }
-
 a:visited {
   color: #b4befe;
 }
-
 a:hover {
   color: #f38ba8;
 }
-
 ::selection {
   color: #f38ba8;
   background-color: #f38ba84b;
 }
-
 :root {
   --base: #1e1e2e;
   --mantle: #181825;
@@ -24,13 +20,12 @@ a:hover {
   --border: #45475a;
   --header-height: 50px;
 }
-
 body {
+  font-family: "Noto Sans";
   background-color: var(--base);
   color: var(--text-color);
   margin: 0px;
 }
-
 .header {
   display: flex;
   position: sticky;
@@ -40,7 +35,6 @@ body {
   min-height: var(--header-height);
   border-bottom: solid 1px var(--border);
 }
-
 .topnav {
   display: flex;
   align-items: stretch;
@@ -49,7 +43,6 @@ body {
   margin: 0px 20px;
   padding: 0px 0px;
 }
-
 .topnav > a {
   display: flex;
   position: relative;
@@ -59,9 +52,12 @@ body {
   color: #cdd6f4 !important;
   transition: 200ms;
 }
-
 .topnav > a:hover {
   background-color: #9399b222;
+}
+.topnav > a.active {
+  color: #f38ba8 !important;
+  font-weight: 500;
 }
 .topnav > a.active::after {
   content: "";
