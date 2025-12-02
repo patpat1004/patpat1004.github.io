@@ -1,3 +1,28 @@
+html.theme-dark {
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+  --accent: #f38ba8;
+  --transparent-accent: #f38ba84b;
+  --text-color: #cdd6f4;
+  --border: #45475a;
+}
+
+html.theme-light {
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --crust: #dce0e8;
+  --accent: #d20f39;
+  --transparent-accent: #d20f394b;
+  --text-color: #4c4f69;
+  --border: #bcc0cc;
+}
+
+:root {
+  --header-height: 50px;
+  --main-width: 1200px;
+}
+
 a:link {
   color: #89b4fa;
 }
@@ -7,23 +32,12 @@ a:visited {
 }
 
 a:hover {
-  color: #f38ba8;
+  color: var(--accent);
 }
 
 ::selection {
-  color: #f38ba8;
-  background-color: #f38ba84b;
-}
-
-:root {
-  --base: #1e1e2e;
-  --mantle: #181825;
-  --crust: #11111b;
-  --accent: #f38ba8;
-  --text-color: #cdd6f4;
-  --border: #45475a;
-  --header-height: 50px;
-  --main-width: 1200px;
+  color: var(--accent);
+  background-color: var(--transparent-accent);
 }
 
 body {
@@ -96,7 +110,7 @@ header {
   align-items: center;
   padding: 0 10px;
   text-decoration: none;
-  color: #cdd6f4 !important;
+  color: var(--text-color) !important;
   transition: 200ms;
 }
 
@@ -105,13 +119,13 @@ header {
 }
 
 .topnav > a.active {
-  color: #f38ba8 !important;
+  color: var(--accent) !important;
   font-weight: 600;
 }
 
 .topnav > a.active::after {
   content: "";
-  background-color: #f38ba8;
+  background-color: var(--accent);
   height: 2px;
   position: absolute;
   bottom: 0px;
